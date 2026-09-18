@@ -1,0 +1,6 @@
+n1 = input("Enter your name")
+n2 = input("Enter your name")
+print(n1)
+print(n2)
+print(n1)
+print(n2)
