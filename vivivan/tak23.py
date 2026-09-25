@@ -1,5 +1,48 @@
-math1 = input(12 + 12)
-math2 = input(12- 12)
-math3 = input(12 * 12)
-math4 = input(12 / 12)
-if
+print("Maths Quiz")
+
+score = 0
+
+
+print("What is 37 + 58?")
+answer1 = int(input())
+if answer1 == 95:
+    print("Correct")
+    score = score + 1
+else:
+    print("Wrong, it is 95")
+
+
+print("What is 93 - 45?")
+answer2 = int(input())
+if answer2 == 48:
+    print("Correct")
+    score = score + 1
+else:
+    print("Wrong, it is 48")
+
+
+print("What is 7 x 8?")
+answer3 = int(input())
+if answer3 == 56:
+    print("Correct")
+    score = score + 1
+else:
+    print("Wrong, it is 56")
+
+
+print("What is 72 / 6?")
+answer4 = int(input())
+if answer4 == 12:
+    print("Correct")
+    score = score + 1
+else:
+    print("Wrong, it is 12")
+
+
+if score == 4:
+    final_score = 5
+else:
+    final_score = score
+
+print("Your score is:")
+print(final_score)
