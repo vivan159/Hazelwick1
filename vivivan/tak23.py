@@ -39,10 +39,4 @@ else:
     print("Wrong, it is 12")
 
 
-if score == 4:
-    final_score = 5
-else:
-    final_score = score
-
-print("Your score is:")
-print(final_score)
+print(score)
