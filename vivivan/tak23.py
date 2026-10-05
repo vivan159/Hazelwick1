@@ -39,4 +39,4 @@ else:
     print("Wrong, it is 12")
 
 
-print(score)
+print("you got",score,"answeres correct")
