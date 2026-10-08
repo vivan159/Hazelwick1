@@ -1,15 +1,36 @@
 import random
 
-number1 = random.randint(0,100)
-number2 = random.radint(0,100)
-number3 = random.radint(0,100)
-number4 = random.radint(0,100)
-number5 = random.radint(0,100)
+score = 0
 
-guess1 = int(input("Enter your guess!!!!"))
-if guess1 == number1:
-    print("YOu are bang onnnn!!1")
-guess2 = int(input("Enter your guess!!!!"))
-guess3 = int(input("Enter your guess!!!!"))
-guess4 = int(input("Enter your guess!!!!"))
-guess5 = int(input("Enter your guess!!!!"))
+
+for i in range(5):
+    
+    secret = random.randint(0, 100)
+    
+    
+    guess = int(input("Guess the number (0-100): "))
+    
+    
+    if guess > secret:
+        diff = guess - secret
+    else:
+        diff = secret - guess
+        
+   
+    if diff == 0:
+        print("Bang-on!")
+        score = score + 10
+    elif diff <= 5:
+        print("Close!")
+        score = score + 5
+    elif diff <= 10:
+        print("Okay.")
+        score = score + 2
+    else:
+        print("Way off!")
+        score = score + 0
+
+
+
+print("Final score:")
+print(score)
