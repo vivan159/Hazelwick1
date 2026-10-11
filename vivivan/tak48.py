@@ -6,7 +6,7 @@ for row in range(1, height + 1):
     
     
     for star in range(row):
-        print("*", end="")
+        print("*",end="" )
         
     
     print()
