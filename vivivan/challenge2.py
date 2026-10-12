@@ -1,34 +1,42 @@
 import random
 
-print("--- 20 QUESTION MATHS CHALLENGE ---")
 score = 0
 
+print("--- Year 9 Math Quiz ---")
+print("Answer the following 20 questions:\n")
+
+
 for i in range(1, 21):
-    num1 = random.randint(1, 10)
-    num2 = random.randint(1, 10)
+    
     op = random.choice(['+', '-', '*', '/'])
     
     
-    if op == '/':
-        num1 = num1 * num2   
-        correct = num1 // num2
-    elif op == '+':
-        correct = num1 + num2
+    num1 = random.randint(1, 12)
+    num2 = random.randint(1, 12)
+    
+    
+    if op == '+':
+        correct_answer = num1 + num2
     elif op == '-':
-        
-        if num1 < num2:
-            num1, num2 = num2, num1
-        correct = num1 - num2
+        correct_answer = num1 - num2
     elif op == '*':
-        correct = num1 * num2
+        correct_answer = num1 * num2
+    elif op == '/':
+    
+        num1 = num1 * num2
+        correct_answer = num1 // num2 
 
+   
+    user_answer = int(input(f"Question {i}: What is {num1} {op} {num2}? "))
     
-    ans = input(f"Q{i}: {num1} {op} {num2} = ")
     
-    
-    if int(ans) == correct:
+    if user_answer == correct_answer:
         print("Correct!")
-        score += 1
+        score = score + 1
     else:
-        print(f"Wrong. The answer was {correct}")
-        print(f"Game Over! Your final score is {score} out of 20.")
+        print(f"Wrong! The correct answer was {correct_answer}")
+    print() 
+
+
+print("--- Quiz Finished ---")
+print(f"Your final score is {score} out of 20.")
