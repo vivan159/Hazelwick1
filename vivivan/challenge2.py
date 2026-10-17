@@ -3,7 +3,7 @@ import random
 score = 0
 
 print("--- Year 9 Math Quiz ---")
-print("Answer the following 20 questions:\n")
+print("Answer the following 20 questions:")
 
 
 for i in range(1, 21):

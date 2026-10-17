@@ -1,20 +1,21 @@
-# 1. Ask the user for a whole number
-number = int(input("Enter a number: "))
+# 1. Ask the user for a number
+num = int(input("Enter a number to check: "))
 
+# 2. Set up an empty piece of text to hold our answers
+results = ""
 
-divisors = [3, 5, 7]
+# 3. Check each number one by one
+if num % 3 == 0:
+    results = results + "3 "
 
+if num % 5 == 0:
+    results = results + "5 "
 
-divisible_by = []
+if num % 7 == 0:
+    results = results + "7 "
 
-
-for d in divisors:
-    if number % d == 0:
-        divisible_by.append(str(d)) 
-
-
-if len(divisible_by) == 0:
-    print("The number is not divisible by 3, 5, or 7.")
+# 4. Print the final answer based on what we found
+if results == "":
+    print("Your number is not divisible by 3, 5, or 7.")
 else:
-    results = ", ".join(divisible_by)
-    print("The number is divisible by: " + results)
+    print("Your number is divisible by: " + results)
