@@ -1,22 +1,18 @@
-c = 0
-while c<=8:
+allowed_count = 0
+
+while allowed_count < 8:
+    height = int(input("Enter rider height in cm: "))
     
-  height = int(input("Enter your height in cm"))
-if height<140 and height>=120:
-    ans = input(  )
-    if ans == "yes":
-        print("you can ride!!")
-        c= c + 1
+    if height >= 140:
+        print("Allowed to ride.")
+        allowed_count = allowed_count + 1
+    elif height >= 120 and input("Are you riding with an adult? (yes/no): ").lower() == "yes":
+        print("Allowed to ride.")
+        allowed_count = allowed_count + 1
     else:
-        print("you can not ride!!")
+        print("Not allowed to ride.")
 
-
-elif height>=140:
-    print("You can ride!!")
-    c = c+1
-
-else:
-     print("You can ride!!")
+print("Ride is full!")
 
 
 
