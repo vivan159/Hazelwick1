@@ -1,0 +1,18 @@
+balance = 500
+
+while True:
+    print("Your balance is £", balance)
+
+    amount = int(input("Withdraw amount (0 to exit): "))
+
+    if amount == 0:
+        break
+    elif amount > balance:
+        print("Insufficient funds")
+    elif amount < 0:
+        print("Invalid amount")
+    else:
+        balance = balance - amount
+        print("Withdrawal successful")
+
+print("Final balance:", balance)
