@@ -2,10 +2,11 @@ import random
 
 score = 0
 round_count = 0  
+secret = random.randint(0, 100)
 
 
 while True:
-    secret = random.randint(0, 100)
+    
     guess = int(input("Guess the number (0-100): "))
     
    
